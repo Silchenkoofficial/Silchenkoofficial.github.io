@@ -117,16 +117,16 @@ a {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      @media (max-width: 768px) {
+      @media (max-width: 769px) {
          display: none;
       }
       a {
          font-size: 20px;
          font-weight: normal;
-         @media (max-width: 1200px) {
+         @media (max-width: 1201px) {
             font-size: 16px;
          }
-         @media (max-width: 992px) {
+         @media (max-width: 993px) {
             font-size: 12px;
          }
       }
@@ -144,7 +144,7 @@ a {
       color: #ffffff;
       font-size: 48px;
       padding: 100px 0 450px;
-      @media (max-width: 768px) {
+      @media (max-width: 769px) {
          font-size: 24px;
       }
    }
@@ -166,18 +166,18 @@ a {
       justify-content: space-between;
       flex-wrap: wrap;
       box-shadow: 0 4px 10px #fe743d;
-      @media (max-width: 992px) {
+      @media (max-width: 993px) {
          padding: 100px 50px;
       }
       &__give,
       &__get {
          flex: 0 1 40%;
-         @media (max-width: 768px) {
+         @media (max-width: 769px) {
             flex: 0 1 100%;
          }
       }
       &__get {
-         @media (max-width: 768px) {
+         @media (max-width: 769px) {
             margin-top: 30px;
          }
       }
@@ -257,6 +257,10 @@ a {
 // ===================================================
 .video {
    padding: 55px 0 40px;
+   iframe {
+      width: 100%;
+      height: 350px;
+   }
 }
 // ===================================================
 // PARTNERS ==========================================
@@ -310,10 +314,10 @@ a {
          background-color: #3a74d6;
          color: #fff;
          font-size: 24px;
-         @media (max-width: 992px) {
+         @media (max-width: 993px) {
             width: 100%;
          }
-         @media (max-width: 768px) {
+         @media (max-width: 769px) {
             width: 50%;
          }
          @media (max-width: 600px) {
@@ -343,7 +347,7 @@ a {
       display: flex;
       align-items: flex-start;
       justify-content: flex-end;
-      @media (max-width: 768px) {
+      @media (max-width: 769px) {
          justify-content: flex-start;
       }
       img {
