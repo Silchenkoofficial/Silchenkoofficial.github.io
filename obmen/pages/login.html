@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>OBMENEX</title>
+
+   <!-- FONTS -->
+   <script src="https://kit.fontawesome.com/020256b499.js" crossorigin="anonymous"></script>
+
+   <!-- STYLES -->
+   <link rel="stylesheet" href="./../css/bootstrap/bootstrap.min.css">
+   <link rel="stylesheet" href="./../css/main.css">
+</head>
+
+<body>
+
+   <header class="header">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-5 ml-auto">
+               <div class="header__schedule">
+                  <p>График работы:</p>
+                  <p>Пн. - Вск.</p>
+                  <p>с 08:00 до 24:00 по мск.</p>
+               </div>
+            </div>
+            <div class="col-sm-4">
+               <div class="header__telegram">
+                  <a href="javascript://"><i class="fab fa-telegram"></i>@WMWex</a>
+                  <a href="javascript://"><i class="fab fa-telegram"></i>@exobmen_bot</a>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-3">
+               <div class="header__logo" onclick="location.href = './../index.html'">
+                  <img src="./../images/header/logo.png" alt="Logo">
+               </div>
+            </div>
+            <div class="col">
+               <div class="header__menu menu">
+                  <a href="./policy.html">Пользовательское соглашение</a>
+                  <a href="./contacts.html">Контакты</a>
+                  <a href="javascript://">Партнерская программа</a>
+                  <a href="javascript://" class="menu-active">Личный кабинет</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <section class="policy">
+      <div class="policy__title">
+         Пользовательское соглашение
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col">
+               <div class="navigation">
+                  <a href="./../index.html">Главная</a>
+                  <i class="fas fa-angle-right"></i>
+                  <p>Личный кабинет</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="login">
+      <div class="container">
+         <div class="row">
+            <div class="col">
+               <form class="login__form form">
+                  <div class="sign-up">
+                     <div class="title">Регистрация</div>
+                     <label for="" class="form__label">
+                        <p>Ваш E-mail</p>
+                        <input type="email" placeholder="">
+                     </label>
+                     <label for="" class="form__label">
+                        <p>Пароль</p>
+                        <input type="password">
+                     </label>
+                     <label for="" class="form__label">
+                        <p>Подтверждение пароля</p>
+                        <input type="password">
+                     </label>
+                     <label for="" class="form__label">
+                        <p>Код с картинки</p>
+                        <div class="form__captcha">
+                           <input type="number">
+                           <img src="./../images/login/captcha.png" alt="">
+                        </div>
+                     </label>
+                     <div class="form__button">Зарегистрироваться</div>
+                  </div>
+                  <div class="sign-in"></div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <footer class="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md">
+               <div class="footer__copyright">
+                  © ObmenEX | Карта сайта | Пользовательское соглашение | Telegram чат
+               </div>
+            </div>
+            <div class="col-md-3 ml-auto">
+               <div class="footer__logo">
+                  <img src="./../images/footer/icon-1.png" alt="">
+                  <img src="./../images/footer/icon-2.png" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+</body>
+
+</html>
