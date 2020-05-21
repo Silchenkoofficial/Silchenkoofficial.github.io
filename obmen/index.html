@@ -46,8 +46,18 @@
                   <a href="javascript://">Партнерская программа</a>
                   <a href="pages/login.html">Личный кабинет</a>
                </div>
+               <div class="menu__burger">
+                  <div class="burger__btn">Меню</div>
+               </div>
             </div>
          </div>
+      </div>
+      <div class="burger__link">
+         <div class="burger__close"><i class="fas fa-times"></i></div>
+         <a href="pages/policy.html">Пользовательское соглашение</a>
+         <a href="javascript://">Контакты</a>
+         <a href="javascript://">Партнерская программа</a>
+         <a href="pages/login.html">Личный кабинет</a>
       </div>
    </header>
 
@@ -64,27 +74,27 @@
                         Вы отдаете
                      </div>
                      <div class="main__give__block block">
-                        <div class="block__item active">
+                        <div class="block__item" data-payment="visaR">
                            <img src="./images/payment/visa.png" alt="">
                            Карта RUB
                         </div>
-                        <div class="block__item">
+                        <div class="block__item" data-payment="Exmo">
                            <img src="./images/payment/exmo.png" alt="">
                            Exmo
                         </div>
-                        <div class="block__item">
+                        <div class="block__item" data-payment="Bitcoin">
                            <img src="./images/payment/bitcoin.png" alt="">
                            Bitcoin
                         </div>
-                        <div class="block__item">
+                        <div class="block__item" data-payment="Litecoin">
                            <img src="./images/payment/litecoin.png" alt="">
                            Litecoin
                         </div>
-                        <div class="block__item">
+                        <div class="block__item" data-payment="Mobile">
                            <img src="./images/payment/mobile.png" alt="">
                            Баланс телефона
                         </div>
-                        <div class="block__item">
+                        <div class="block__item" data-payment="VisaU">
                            <img src="./images/payment/visa.png" alt="">
                            Карта UA
                         </div>
@@ -95,19 +105,19 @@
                         Вы получаете
                      </div>
                      <div class="main__get__block block">
-                        <div class="block__item disable">
+                        <div class="block__item" data-payment="visaR">
                            <img src="./images/payment/visa.png" alt="">
                            Карта RUB
                         </div>
-                        <div class="block__item">
+                        <div class="block__item" data-payment="Exmo">
                            <img src="./images/payment/exmo.png" alt="">
                            Exmo
                         </div>
-                        <div class="block__item">
+                        <div class="block__item" data-payment="Bitcoin">
                            <img src="./images/payment/bitcoin.png" alt="">
                            Bitcoin
                         </div>
-                        <div class="block__item">
+                        <div class="block__item" data-payment="Litecoin">
                            <img src="./images/payment/litecoin.png" alt="">
                            Litecoin
                         </div>
@@ -260,13 +270,32 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
    <script>
       $('.main__give .block__item').on('click', function() {
+         let payment = $(this).attr('data-payment');
          $('.main__give .block__item').removeClass('active');
+         $('.main__get .block__item').removeClass('disable');
          $(this).addClass('active');
+         let paymentBlock = $('.main__get .block__item');
+         for (let i = 0; i < paymentBlock.length; i++) {
+            if ($(paymentBlock[i]).attr('data-payment') == payment) {
+               if ($(paymentBlock[i]).hasClass('active')) {
+                  $(paymentBlock[i]).removeClass('active')
+               }
+               $(paymentBlock[i]).addClass('disable');
+            }
+         }
       });
 
       $('.main__get .block__item').on('click', function() {
          $('.main__get .block__item').removeClass('active');
-         $(this).addClass('active');
+         if (!$(this).hasClass('disable')) {
+            $(this).addClass('active');
+         }
+      });
+      $('.burger__btn').on('click', function() {
+         $('.burger__link').css('left', '0px');
+      });
+      $('.burger__close').on('click', function() {
+         $('.burger__link').css('left', '-9999px');
       });
    </script>
 </body>

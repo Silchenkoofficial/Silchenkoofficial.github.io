@@ -1,0 +1,217 @@
+.payment {
+   margin-bottom: 100px;
+   &__title {
+      padding-left: 50px;
+      margin-bottom: 35px;
+      font-size: 24px;
+      color: #022ebf;
+      @media (max-width: 601px) {
+         padding: 0;
+      }
+   }
+   &__text {
+      span {
+         display: block;
+         font-weight: bold;
+      }
+      padding-left: 50px;
+      margin-bottom: 35px;
+      font-size: 18px;
+      color: #545454;
+      font-weight: normal;
+      @media (max-width: 601px) {
+         padding: 0;
+      }
+   }
+   .block {
+      padding: 64px 40px;
+      border: 3px solid #faa420;
+      border-radius: 30px;
+      background-color: #fff;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px #fe743d;
+      .block__form {
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+      &__money {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+
+         color: #6f6f72;
+         font-size: 24px;
+      }
+      .form {
+         width: 45%;
+         margin-bottom: 40px;
+         display: flex;
+         flex-direction: column;
+         @media (max-width: 993px) {
+            width: 100%;
+         }
+
+         .remember {
+            display: flex;
+            align-items: center;
+            p {
+               margin: 0 0 0 25px;
+               font-size: 16px;
+               a {
+                  text-decoration: underline;
+               }
+            }
+            input {
+               width: 20px;
+            }
+         }
+
+         label {
+            margin-top: 40px;
+            position: relative;
+         }
+
+         p {
+            margin: 0 0 30px 25px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #545454;
+         }
+
+         span {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            margin-left: 25px;
+            color: #ff4444;
+            font-size: 16px;
+            font-weight: normal;
+            @media (max-width: 486px) {
+               bottom: -90px;
+            }
+         }
+
+         input {
+            outline: none;
+            border: none;
+            background-color: #f6f6f6;
+            height: 62px;
+            width: 100%;
+            border-radius: 24px;
+            padding-left: 25px;
+            font-size: 18px;
+            font-weight: normal;
+
+            &::placeholder {
+               color: #545454;
+            }
+         }
+         .disable {
+            border: 1px solid #ff4444;
+         }
+
+         .form__captcha {
+            height: 62px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .input--captcha {
+               width: 60%;
+            }
+
+            .captcha__img {
+               width: 30%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+
+            img {
+               object-fit: cover;
+               object-position: center;
+            }
+         }
+
+         @media (max-width: 769px) {
+            p {
+               margin: 0 0 30px 0;
+            }
+         }
+      }
+   }
+   .block__converter {
+      margin-top: 45px;
+      padding: 5px 0;
+      img {
+         width: 50px;
+      }
+      i {
+         color: #4c3ce4;
+         font-size: 200%;
+         margin: 0 20px;
+      }
+      background-color: #f4f4f4;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__button {
+      text-align: center;
+      padding: 15px 0;
+      margin: 0 auto;
+      background-color: #ff9718;
+      border-radius: 24px;
+      width: 40%;
+
+      color: #fff;
+      font-size: 24px;
+      @media (max-width: 993px) {
+         width: 100%;
+      }
+   }
+}
+
+.request {
+   text-align: center;
+   &__title {
+      margin-top: 80px;
+      margin-bottom: 50px;
+      font-weight: 500;
+      font-size: 24px;
+      color: #303030;
+   }
+   &__desc {
+      margin-bottom: 50px;
+      font-size: 18px;
+      font-weight: normal;
+      color: #545454;
+   }
+   &__text {
+      margin: 0 auto 80px;
+      width: 80%;
+      padding: 15px 0;
+      background-color: #ebf2ff;
+      border: 1px solid #a39ce2;
+      border-radius: 24px;
+
+      color: #303030;
+      font-size: 24px;
+      font-weight: 500;
+      @media (max-width: 769px) {
+         width: 100%;
+         font-size: 10px;
+      }
+   }
+}
+.back {
+   margin-top: 50px;
+   text-align: center;
+
+   color: #2d1dc1;
+   font-size: 24px;
+   text-decoration: underline;
+}
