@@ -73,6 +73,23 @@ xmp {
 
 // HEADER ============================================
 // ===================================================
+#main-menu {
+   .col.telegram-logos {
+      display: none;
+      .header__telegram {
+         display: none;
+         @media (max-width: 768px) {
+            display: flex;
+         }
+      }
+      @media (max-width: 768px) {
+         display: block;
+      }
+      @media (max-width: 601px) {
+         display: none;
+      }
+   }
+}
 .header {
    padding: 15px 0 30px 0;
    &__schedule {
@@ -86,12 +103,14 @@ xmp {
          font-weight: normal;
          font-size: 0.875rem;
       }
+      @media (max-width: 768px) {
+         display: none;
+      }
    }
    &__telegram {
       margin-bottom: 20px;
       height: 100%;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       a {
@@ -99,28 +118,48 @@ xmp {
          align-items: center;
          font-weight: normal;
          font-size: 0.875rem;
+         &:last-child {
+            margin: 0 10px;
+         }
          i {
             margin-right: 5px;
             font-size: 1.5em;
             color: #25a6de;
          }
       }
+      @media (max-width: 768px) {
+         display: none;
+      }
    }
    &__logo {
       cursor: pointer;
       width: 100%;
       height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       img {
+         width: 50%;
          object-fit: cover;
          object-position: center;
+         @media (max-width: 769px) {
+            width: 80%;
+         }
       }
-
+      p {
+         font-size: 24px;
+         margin-left: -10px;
+         color: #032271;
+         @media (max-width: 768px) {
+            font-size: 16px;
+         }
+      }
    }
    &__menu {
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
       @media (max-width: 769px) {
          display: none;
       }
@@ -219,8 +258,8 @@ xmp {
       font-weight: normal;
    }
    .main {
-      margin-top: -360px;
-      padding: 100px 170px;
+      margin-top: -400px;
+      padding: 50px 170px;
       border: 3px solid #faa420;
       border-radius: 30px;
       background-color: #fff;
@@ -230,7 +269,7 @@ xmp {
       flex-wrap: wrap;
       box-shadow: 0 4px 10px #fe743d;
       @media (max-width: 993px) {
-         padding: 100px 50px;
+         padding: 25px 50px;
       }
       &__give,
       &__get {
@@ -534,8 +573,9 @@ xmp {
          text-decoration: underline;
          i {
             margin-right: 35px;
+            margin-bottom: 10px;
             color: #faa41f;
-            font-size: 200%;
+            font-size: 150%;
          }
       }
    }
@@ -570,6 +610,7 @@ xmp {
             margin: 0 0 100px 25px;
             color: #6f6f72;
             font-size: 24px;
+            font-weight: 900;
          }
          @media (max-width: 769px) {
             flex: 0 1 100%;
