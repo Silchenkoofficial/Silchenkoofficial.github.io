@@ -126,7 +126,7 @@ xmp {
 }
 
 .header__telegram {
-  margin-bottom: 20px;
+  margin-left: 40px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,7 +168,7 @@ xmp {
 
 .header__logo {
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,11 +182,11 @@ xmp {
 }
 
 .header__logo img {
-  width: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 0;
+     object-position: 0;
 }
 
 @media (max-width: 769px) {
@@ -196,7 +196,7 @@ xmp {
 }
 
 .header__logo p {
-  font-size: 24px;
+  font-size: 1.5vw;
   margin-left: -10px;
   color: #032271;
 }
@@ -204,6 +204,7 @@ xmp {
 @media (max-width: 768px) {
   .header__logo p {
     font-size: 16px;
+    margin-left: 0;
   }
 }
 
@@ -215,9 +216,9 @@ xmp {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 769px) {
