@@ -107,7 +107,6 @@ xmp {
       }
    }
    &__telegram {
-      margin-left: 40px;
       // margin-bottom: 20px;
       height: 100%;
       display: flex;
@@ -130,9 +129,6 @@ xmp {
       @media (max-width: 768px) {
          display: none;
       }
-   }
-   .col-3 {
-
    }
    &__logo {
       cursor: pointer;

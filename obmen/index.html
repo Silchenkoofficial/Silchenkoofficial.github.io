@@ -304,5 +304,17 @@
          $('.burger__link').css('left', '-9999px');
       });
    </script>
+   <script>
+      let logoBlock = $('.header__logo').parent();
+      window.addEventListener('resize', function() {
+         if ($(window).width() <= 768) {
+            $(logoBlock).removeClass('col-3');
+            $(logoBlock).addClass('col');
+         } else {
+            $(logoBlock).removeClass('col');
+            $(logoBlock).addClass('col-3');
+         }
+      });
+   </script>
 </body>
 </html>
