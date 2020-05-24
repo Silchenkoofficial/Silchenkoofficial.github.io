@@ -89,8 +89,8 @@
             color: #ff4444;
             font-size: 16px;
             font-weight: normal;
-            @media (max-width: 486px) {
-               bottom: -90px;
+            @media (max-width: 490px) {
+               display: none;
             }
          }
 

@@ -306,6 +306,8 @@
    </script>
    <script>
       let logoBlock = $('.header__logo').parent();
+      if ($(window).width() <= 768) { $(logoBlock).removeClass('col-3'); $(logoBlock).addClass('col'); } else {
+         $(logoBlock).removeClass('col'); $(logoBlock).addClass('col-3'); }
       window.addEventListener('resize', function() {
          if ($(window).width() <= 768) {
             $(logoBlock).removeClass('col-3');
