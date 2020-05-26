@@ -1,0 +1,178 @@
+$yellow: #f8e91c;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+// ОБЩИЕ СТИЛИ==================
+.container {
+    width: 100%;
+    padding: 0 100px;
+    @media (max-width: 768px) {
+        padding: 0 50px;
+    }
+}
+// =============================
+// МИКСИНЫ =====================
+$maxWidth: 1280;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+// =============================
+
+.dropdown__menu {
+    padding: 20px;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translate(-100%);
+    a {
+        font-size: 2em;
+    }
+    .dropdown--close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2em;
+    }
+}
+
+.header {
+    position: relative;
+    z-index: 50;
+    height: 100vh;
+    padding: 25px 0;
+    background: url("./../images/main-bg.jpg") no-repeat center / cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .header__menu {
+            height: 70px;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            a {
+                position: relative;
+                font-weight: 900;
+                font-size: 18px;
+                letter-spacing: 0.2em;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $yellow;
+                    bottom: -23px;
+                    left: 0;
+                    transform: scale(0);
+                }
+                &:hover::after {
+                        transform: scale(1);
+                }
+                @media (max-width: 601px) {
+                    display: none;
+                }
+            }
+            &--burger {
+                margin-left: auto;
+                margin-right: 5%;
+                background-color: $yellow;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5em;
+                i {
+                    color: #000;
+                }
+                @media (min-width: 601px) {
+                    display: none;
+                }
+            }
+            @media (max-width: 601px) {
+                background-color: #000000;
+            }
+        }
+        .main {
+            backdrop-filter: blur(1px);
+            padding: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            &__title {
+                @include adaptiv-font(64, 36);
+                font-weight: 900;
+            }
+            &__text {
+                @include adaptiv-font(36, 18);
+            }
+            &__button {
+                margin-top: 20px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                a {
+                    flex: 0 1 40%;
+                    background-color: $yellow;
+                    color: #000;
+                    padding: 15px 0;
+                    font-size: 20px;
+                    border-radius: 5px;
+                    @media (max-width: 601px) {
+                        flex: 0 1 100%;
+                    }
+                }
+            }
+        }
+    }
+}
