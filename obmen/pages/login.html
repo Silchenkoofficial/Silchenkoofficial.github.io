@@ -34,9 +34,9 @@
             </div>
          </div>
          <div class="row" id="main-menu">
-            <div class="col-5">
+            <div class="col-3">
                <div class="header__logo" onclick="location.href = './../index.html'">
-                  <img src="./../images/header/Logotype_EX.png" alt="Logo">
+                  <img src="./../images/header/logo.svg" alt="Logo">
                   <p>OBMENEX.com</p>
                </div>
             </div>
@@ -170,6 +170,20 @@
       });
       $('.burger__close').on('click', function() {
       $('.burger__link').css('left', '-9999px');
+      });
+   </script>
+   <script>
+      let logoBlock = $('.header__logo').parent();
+      if ($(window).width() <= 768) { $(logoBlock).removeClass('col-3'); $(logoBlock).addClass('col'); } else {
+         $(logoBlock).removeClass('col'); $(logoBlock).addClass('col-3'); }
+      window.addEventListener('resize', function () {
+         if ($(window).width() <= 768) {
+            $(logoBlock).removeClass('col-3');
+            $(logoBlock).addClass('col');
+         } else {
+            $(logoBlock).removeClass('col');
+            $(logoBlock).addClass('col-3');
+         }
       });
    </script>
 

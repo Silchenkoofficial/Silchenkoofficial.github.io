@@ -134,9 +134,9 @@
   font-weight: normal;
 }
 
-@media (max-width: 486px) {
+@media (max-width: 490px) {
   .payment .block .form span {
-    bottom: -90px;
+    display: none;
   }
 }
 
