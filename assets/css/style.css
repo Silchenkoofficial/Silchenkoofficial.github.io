@@ -311,7 +311,7 @@ img {
   border-radius: 10px;
 }
 
-@media (max-width: 601px) {
+@media (max-width: 768px) {
   .works .main__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
@@ -354,7 +354,15 @@ img {
 
 .works .main__detail {
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
+  border-radius: 10px 0 0 10px;
   top: 0;
   left: 0;
   width: 70%;
@@ -371,4 +379,31 @@ img {
 .works .main__detail .detail__title {
   font-size: 24px;
   font-weight: bold;
+}
+
+.works .main__detail .detail__desc {
+  font-size: 16px;
+  color: #737373;
+}
+
+.works .main__detail a {
+  margin-top: 20px;
+  padding: 15px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  background-color: #000;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.works .main__detail .date {
+  margin-top: auto;
 }
