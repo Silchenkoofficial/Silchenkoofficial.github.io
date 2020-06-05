@@ -311,7 +311,7 @@ img {
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .works .main__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 90%;
@@ -411,6 +411,14 @@ img {
   -webkit-box-shadow: 0 0 10px #000000;
           box-shadow: 0 0 10px #000000;
   color: #fff;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
+}
+
+@media (max-width: 768px) {
+  .works .main__detail a {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1200px) {
