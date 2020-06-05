@@ -3,13 +3,14 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/assets/css/"
+            "savePath": "/myWorks/cuda/css/"
         },
         {
             "format": "compressed",
             "extensionName": ".min.css",
-            "savePath": "/assets/css/"
+            "savePath": "/myWorks/cuda/css/"
         }
     ],
-    "liveSassCompile.settings.generateMap":false
+    "liveSassCompile.settings.generateMap": false,
+    "git.ignoreLimitWarning": true
 }

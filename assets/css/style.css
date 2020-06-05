@@ -31,8 +31,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   -o-object-position: center;
      object-position: center;
 }
@@ -282,7 +282,7 @@ img {
 .works__title {
   margin-bottom: 50px;
   text-align: center;
-  font-size: 36px;
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -307,15 +307,16 @@ img {
           flex: 0 1 45%;
   margin-bottom: 50px;
   width: 100%;
-  height: 300px;
+  height: 460px;
   border-radius: 10px;
 }
 
 @media (max-width: 768px) {
   .works .main__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+        -ms-flex: 0 1 90%;
+            flex: 0 1 90%;
+    height: 210px;
   }
 }
 
@@ -376,6 +377,12 @@ img {
           transform: perspective(2000px) rotateY(-90deg);
 }
 
+@media (max-width: 425px) {
+  .works .main__detail {
+    width: 90%;
+  }
+}
+
 .works .main__detail .detail__title {
   font-size: 24px;
   font-weight: bold;
@@ -401,9 +408,80 @@ img {
   width: 50%;
   background-color: #000;
   border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #000000;
+          box-shadow: 0 0 10px #000000;
   color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .works .main__detail a {
+    width: 100%;
+  }
 }
 
 .works .main__detail .date {
   margin-top: auto;
+  font-size: 14px;
+}
+
+.contact {
+  padding: 50px 0;
+  background-color: #545454;
+}
+
+.contact__title {
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+
+.contact .container .form {
+  padding: 50px 20px;
+  border-radius: 10px;
+  width: 50%;
+  margin-left: auto;
+  background-color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .contact .container .form {
+    width: 100%;
+  }
+}
+
+.contact .container .form .main__inputs {
+  position: relative;
+}
+
+.contact .container .form .main__inputs input {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #545454;
+}
+
+.contact .container .form .main__btn {
+  padding: 15px 0;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f8e91c;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
 }
