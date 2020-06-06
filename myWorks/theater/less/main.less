@@ -5,6 +5,8 @@
     src: url(./../fonts/CENSCBK.TTF) format("truetype");
 }
 
+@yellow: #EBC44F;
+
 *,
 *::after,
 *::before {
@@ -141,3 +143,68 @@ a {
         }
     }
 }
+
+.about {
+    position: relative;
+    margin: 100px 0;
+    background: url('./../images/about-bg.png') no-repeat right / cover;
+    .about__subtitle {
+        position: absolute;
+        top: -100px;
+        font-family: "Schoolbook", sans-serif;
+        font-size: 144px;
+        color: @yellow;
+        opacity: 0.149;
+    }
+    .about__main {
+        .about__title {
+            h1 {
+                font-family: "Schoolbook", sans-serif;
+                font-size: 48px;
+                font-weight: normal;
+            }
+            p {
+                font-family: "Schoolbook", sans-serif;
+                font-size: 24px;
+            }
+            .about__text {
+                font-size: 16px;
+            }
+        }
+        .content {
+            margin-top: 65px;
+            width: 50%;
+            &__title {
+                font-family: "Schoolbook", sans-serif;
+                font-size: 18px;
+
+                color: @yellow;
+            }
+            &__text {
+                margin: 10px 0 30px;
+                font-size: 16px;
+                color: #434343;
+                &:last-child {
+                    margin: 0 0 60px;
+                }
+            }
+        }
+        .about__buttons {
+            a {
+                padding: 20px 45px;
+                display: inline-flex;
+                border: 1px solid #000000;
+                border-radius: 5px;
+                font-size: 18px;
+                &:first-child {
+                    margin-right: 20px;
+                }
+                &:hover {
+                    background-color: #292929;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
