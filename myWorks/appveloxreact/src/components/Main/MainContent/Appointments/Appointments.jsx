@@ -3,8 +3,8 @@ import { Card } from './Card/Card';
 import {Link} from 'react-router-dom';
 import './Appointments.css';
 
-export const Appointments = () => {
-    let appointmentJSON = getAppointments("https://api.jsonbin.io/b/5f7cc3f57243cd7e824bb9bc/5");
+export const Appointments = (props) => {
+    let appointmentJSON = props.data;
     return (
         <div className="appointments">
             <div className="appointments__title">Записи на прием</div>
@@ -37,11 +37,4 @@ export const Appointments = () => {
             </div>
         </div>
     )
-}
-
-function getAppointments(fileName) {
-    let request = new XMLHttpRequest();
-    request.open('GET', fileName, false);
-    request.send(null);
-    return JSON.parse(request.responseText);
 }

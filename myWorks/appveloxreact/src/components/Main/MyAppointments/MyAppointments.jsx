@@ -4,8 +4,8 @@ import './MyAppointments.css';
 import { Card } from '../MainContent/Appointments/Card/Card';
 import Calendar from './Calendar/Calendar';
 
-export const MyAppointments = () => {
-    let appointmentJSON = getAppointments("https://api.jsonbin.io/b/5f7cc3f57243cd7e824bb9bc/5");
+export const MyAppointments = (props) => {
+    let appointmentJSON = props.data;
     return (
         <div className="appointments">
             <div className="appointments__title">
@@ -32,11 +32,4 @@ export const MyAppointments = () => {
             </div>
         </div>
     )
-}
-
-function getAppointments(fileName) {
-    let request = new XMLHttpRequest();
-    request.open('GET', fileName, false);
-    request.send(null);
-    return JSON.parse(request.responseText);
 }

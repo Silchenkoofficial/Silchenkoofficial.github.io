@@ -15,6 +15,20 @@
             margin: 0 38px;
         }
     }
+    &__weekDays {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .weekDay {
+            padding: 10px 0;
+            text-align: center;
+            flex: 0 0 14.2%;
+            width: 68.7px;
+            height: 17px;
+            font-size: 0.875rem;
+            cursor: pointer;
+        }
+    }
     &__body {
         height: 100%;
     }
@@ -24,28 +38,31 @@
         .row {
             display: flex;
             flex-direction: row;
-            &:first-child {
-                height: 37px;
-                .cell {
-                    height: 37px;
-                    background-color: inherit !important;
-                    font-size: 0.875rem;
-                    font-weight: 300;
-                    cursor: auto;
-                }
-            }
         }
         .cell {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
+            padding: 5px;
             flex: 0 0 14.2%;
-            text-align: center;
             width: 68.7px;
             height: 63px;
             font-size: 1.25rem;
             background-color: #fff;
             cursor: pointer;
+            .cellAppointments {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                width: 22px;
+                height: 22px;
+                background-color: #50caff;
+                border-radius: 50%;
+                font-size: 0.875rem;
+                font-weight: 400;
+                color: #fff;
+            }
         }
     }
 }

@@ -15,6 +15,19 @@
 }
 .appointments__card {
   flex: 0 0 48%;
-  height: 80vh;
+  height: 494px;
   overflow-y: scroll;
+}
+.appointments__card::-webkit-scrollbar {
+  width: 8px;
+  height: 174px;
+}
+.appointments__card::-webkit-scrollbar-track-piece {
+  background-color: #EBE7FF;
+  border-radius: 5px;
+}
+.appointments__card::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #003B72;
+  border-radius: 5px;
 }
