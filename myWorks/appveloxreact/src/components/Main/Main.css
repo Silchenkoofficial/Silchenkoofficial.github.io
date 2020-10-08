@@ -1,0 +1,8 @@
+.wrapper .main {
+    flex: 0 0 85%;
+}
+
+.main {
+    width: 100%;
+    overflow-y: hidden;
+}

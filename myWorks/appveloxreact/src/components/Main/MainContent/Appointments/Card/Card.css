@@ -1,0 +1,66 @@
+.card {
+    position: relative;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    flex: 0 0 40%;
+    box-shadow: 0px 0px 5px #EBE7FF;
+    border-radius: 5px;
+}
+.card:hover {
+    transform: scale(1.01);
+}
+
+.card__day {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card__hospital,
+.card__address {
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+.card__doctor {
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+}
+.card__doctor--photo {
+    width: 60px;
+    height: 60px;
+}
+.card__doctor--photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.card__doctor .doctor {
+    margin-left: 10px;
+}
+.card__doctor .doctor .doctor__fio {
+    margin-bottom: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.card__doctor .doctor .doctor__specialty {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #EBE7FF;
+}
+.card__undoBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 15px;
+
+    background-color: #7761FF;
+    color: #fff;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 5px;
+
+    cursor: pointer;
+}

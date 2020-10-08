@@ -1,0 +1,48 @@
+.calendar {
+  flex: 0 0 45%;
+  background-color: #EBE7FF;
+  border-radius: 5px;
+}
+.calendar__months {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #7761FF;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+}
+.calendar__months .month {
+  margin: 0 38px;
+}
+.calendar__body {
+  height: 100%;
+}
+.calendar__dayName {
+  padding: 10px;
+  height: 100%;
+}
+.calendar__dayName .row {
+  display: flex;
+  flex-direction: row;
+}
+.calendar__dayName .row:first-child {
+  height: 37px;
+}
+.calendar__dayName .row:first-child .cell {
+  height: 37px;
+  background-color: inherit !important;
+  font-size: 0.875rem;
+  font-weight: 300;
+  cursor: auto;
+}
+.calendar__dayName .cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 14.2%;
+  text-align: center;
+  width: 68.7px;
+  height: 63px;
+  font-size: 1.25rem;
+  background-color: #fff;
+  cursor: pointer;
+}

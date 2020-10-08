@@ -1,0 +1,51 @@
+// out: ./Calendar.css
+
+.calendar {
+    flex: 0 0 45%;
+    // height: 481px;
+    background-color: #EBE7FF;
+    border-radius: 5px;
+    &__months {
+        padding: 20px 0;
+        text-align: center;
+        background-color: #7761FF;
+        color: #fff;
+        border-radius: 5px 5px 0 0;
+        .month {
+            margin: 0 38px;
+        }
+    }
+    &__body {
+        height: 100%;
+    }
+    &__dayName {
+        padding: 10px;
+        height: 100%;
+        .row {
+            display: flex;
+            flex-direction: row;
+            &:first-child {
+                height: 37px;
+                .cell {
+                    height: 37px;
+                    background-color: inherit !important;
+                    font-size: 0.875rem;
+                    font-weight: 300;
+                    cursor: auto;
+                }
+            }
+        }
+        .cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 14.2%;
+            text-align: center;
+            width: 68.7px;
+            height: 63px;
+            font-size: 1.25rem;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    }
+}
