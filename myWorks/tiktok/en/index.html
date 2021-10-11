@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TikTok Video Downloader">
+    <title>TikTok Downloader - Download and Save TikTok Videos</title>
+
+    <link rel="stylesheet" href="../libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,regular,500,600,700,800,900"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header" id="search-bar">
+        <nav class="header__nav navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                How to?
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./how-to-download-android.html">How to Download
+                                        Tik-Tok to android</a></li>
+                                <li><a class="dropdown-item" href="#">How to Download Tik-Tok to iphone/ipad</a></li>
+                                <li><a class="dropdown-item" href="#">How to Download Tik-Tok to PC</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                English
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="../en/index.html">English</a></li>
+                                <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                                <li><a class="dropdown-item" href="#">Dansk</a></li>
+                                <li><a class="dropdown-item" href="#">Español</a></li>
+                                <li><a class="dropdown-item" href="#">Français</a></li>
+                                <li><a class="dropdown-item" href="#">Italiano</a></li>
+                                <li><a class="dropdown-item" href="#">Nederlands</a></li>
+                                <li><a class="dropdown-item" href="#">Português</a></li>
+                                <li><a class="dropdown-item" href="#">Polski</a></li>
+                                <li><a class="dropdown-item" href="#">Русский</a></li>
+                                <li><a class="dropdown-item" href="#">العربية</a></li>
+                                <li><a class="dropdown-item" href="#">日本語</a></li>
+                                <li><a class="dropdown-item" href="#">한국어</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="header__content">
+                <div class="header__title">Tik-Tok Downloader</div>
+                <div class="header__subtitle">Download and Save Tik-Tok Videos.
+                </div>
+                <form class="header__form">
+                    <div class="input-group">
+                        <span style="background-color: #fff; border: 1px solid #fff;" class="input-group-text">
+                            <i class="fas fa-chevron-right" style="color: #277c9d;"></i>
+                        </span>
+                        <input id="search-input" type="text" class="form-control"
+                            placeholder="Paste a Tik-Tok video URL here..." aria-label="Username"
+                            aria-describedby="basic-addon1" style="border: 1px solid #fff;">
+                        <button class="btn btn-primary" style="border: 1px solid #fff;" type="button"
+                            id="search-btn">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class='col-xs-12' id='result-area'>
+        <div class='col-xs-8 col-xs-offset-2 result' id='result-base'>
+            <div class='col-xs-11'>
+                <div class='btn btn-group-justified'>
+                    <span class='btn btn-primary' id="download_video">
+                        <span class='result-download-video'></span>
+                        <span class='glyphicon glyphicon-download pull-right'></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div align='center' class='col-xs-12' id='loading'>
+        <span class='glyphicon glyphicon-repeat text-primary'></span>
+    </div>
+
+    <section class="section whatis">
+        <div class="container">
+            <div class="section__title">Tik-Tok Video Downloader</div>
+            <div class="section__info">
+                <p>Tik-Tok video downloader is a free online service that helps you to download
+                    Tik-Tok videos without watermark. You can access it on desktop PCs, smart phones (Android, iPhone),
+                    iPad
+                    and tablets. and save a video as a high-definition MP4 or MP3 of the best quality.</p>
+
+                <p>Go to Tik-Tok app or website, copy a video URL, and paste it to the above input box. Download a video
+                    of
+                    no watermark just with a few mouse clicks. The service is free, and imposes no limit on number of
+                    downloads. It is easy and safe since no software installation and registration are required.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section how-to-use">
+        <div class="container">
+            <div class="section__title">How to Use Tik-Tok Video Downloader</div>
+            <div class="section__info">
+                <div class="how-to-use__steps">
+                    <div class="step step1">
+                        <div class="step__title">Find a Tik-Tok video link</div>
+                        <div class="step__desc">Open Tik-Tok, find a video and copy its URL.</div>
+                    </div>
+                    <div class="step step2">
+                        <div class="step__title">Paste the video URL</div>
+                        <div class="step__desc">Paste the video URL to the input box and click the "Search" button.
+                        </div>
+                    </div>
+                    <div class="step step3">
+                        <div class="step__title">Download the Video or Audio</div>
+                        <div class="step__desc">Click the "Download" buttons to save the video or audio.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="faq__title">Frequently Asked Questions</div>
+            <div class="faq__body">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How to download a Tik-Tok video to Android phone?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="card-body">
+                                <ul>
+                                    <li>Open the Tik-Tok app or website on your phone and locate your target video.</li>
+                                    <li>Tap the Share button at the right bottom of the video and click on the Copy Link
+                                        to save the video URL.</li>
+                                    <li>Paste this URL to the input box above. Click on the Search button to grab it.
+                                        Refer to <a href="./how-to-download-android.html">How to Download
+                                            TikTok Videos from Android Phone</a> for details.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How to download a Tik-Tok video to iPhone/ipad?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="card-body">
+                                <p class="h5">The operation procedure is different depending on the OS version and
+                                    device types.</p>
+                                <p>iPhone with iOS 13+ or iPad with iPadOS 13+: the download can be done through the
+                                    browser: Safari.</p>
+                                <ul>
+                                    <li>Open the Tik-Tok app or website on your phone and locate your target video.</li>
+                                    <li>Tap the Share button at the right bottom of the video and click on the Copy Link
+                                        to save the video URL.</li>
+                                    <li>Paste this URL to the input box above. Click on the Search button to grab it.
+                                    </li>
+                                    <li>Click the Download icon at the top right corner of your browser to open the
+                                        folder that holds video just downloaded.</li>
+                                    <li>Save it to your library by clicking on the Share and Save video option
+                                        buttons.<br>
+                                        Refer to <a href="./how-to-download-iphone.html">How to
+                                            Download TikTok Videos from iPhone/iPad ios13+ </a> for details.</li>
+                                </ul>
+                                <p>iPhone or iPad with OS version 12 or less</p>
+                                <ul>
+                                    <li>Install the Documents by Readdle from the Apple Store. Google the name and find
+                                        it in Apple Store. It is free.</li>
+                                    <li>Start the app and click on the Browser icon on its menu bar at the bottom of app
+                                        window to initiate its browser function.</li>
+                                    <li>Go to this site by putting our site’s URL onto its address bar.</li>
+                                    <li>Paste the video URL into the input box and download the video as for iOS 13+
+                                        above.<br>
+                                        Refer to <a href="./how-to-download-iphone.html#ios12">How to
+                                            Download TikTok Videos from iPhone/iPad ios12 </a> for details.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How to download a Tik-Tok video to Desktop PC?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="card-body">
+                                <ul>
+                                    <li>Go to Tik-Tok in your browser, say, Chrome, login to your account and locate
+                                        your target video.</li>
+                                    <li>Tap the video and copy its URL in the browser address bar.</li>
+                                    <li>Paste this URL to the input box above. Click on the Search button to grab it.
+                                        Refer to <a href="./how-to-download-pc.html">How to Download Video
+                                            from PC </a> for details.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Where are the saved videos?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="card-body">
+                                Your video is saved into the default download folder set by your browser, for instance,
+                                Downloads folder on Windows PC.
+                                You can change the default browser settings and make it manually choose the destination
+                                folder.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Is the service provided by this site free?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="card-body">
+                                Yes. It is totally free. Users have to make sure that you have a permission from the
+                                video owner to download the video. Our site does not store and keep any videos from the
+                                Tik-Tok.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Is there a limitation on the number of videos downloaded?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                            data-bs-parent="#accordionExample">
+                            <div class="card-body">
+                                No. You can download videos as many as you like.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Which devices are supported?
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                            data-bs-parent="#accordionExample">
+                            <div class="card-body">
+                                Any devices that can run the popular browsers such as Chrome, IE, Safari, Firefox are
+                                supported to use our service.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__body">
+                <ul>
+                    <li><a href="./about.html">About</a></li>
+                    <div class="footer--dot"></div>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <div class="footer--dot"></div>
+                    <li><a href="./terms.html">Terms of use</a></li>
+                    <div class="footer--dot"></div>
+                    <li><a href="./privacy.html">Privacy Policy</a></li>
+                </ul>
+                <div class="footer__copyright">
+                    ©SaveTiktok.cc 2021 All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../libs/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="../assets/js/TikTok.class.js"></script>
+    <script src="../assets/js/downloadTikTok.js"></script>
+</body>
+
+</html>
