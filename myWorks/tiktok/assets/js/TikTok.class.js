@@ -24,6 +24,7 @@ class JSTikTok {
   force_download(url, title, format) {
     var xhr = new XMLHttpRequest();
     xhr.open("get", url, true);
+    console.log(url);
     xhr.responseType = "blob";
     xhr.onload = function (e) {
       var blob = xhr.response;
