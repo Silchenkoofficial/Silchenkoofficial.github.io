@@ -33,7 +33,7 @@ class JSTikTok {
         window.navigator.msSaveOrOpenBlob(blob, fileName);
       } else {
         // for others
-        var url = window.URL.createObjectURL(blob);
+        // var url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.style.display = "none";
         a.href = url;
