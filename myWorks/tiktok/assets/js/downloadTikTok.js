@@ -4,7 +4,7 @@ var oldMusicDownloadBtn = "";
 $(document).ready(function () {
   document.getElementById("result-area").style.display = "none";
 
-  $("#search-btn").on("click", function () {
+  document.getElementById("search-btn").addEventListener("click", function () {
     TikTok = null;
     document.getElementById("result-area").style.display = "none";
     var url = document.getElementById("search-input").value.trim();
