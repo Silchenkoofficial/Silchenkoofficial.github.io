@@ -1,4 +1,3 @@
-import api from "../../libs/tikapi/api";
 var TikTok = null;
 var oldVideoDownloadBtn = "";
 var oldMusicDownloadBtn = "";
@@ -6,29 +5,20 @@ $(document).ready(function () {
   document.getElementById("result-area").style.display = "none";
 
   document.getElementById("search-btn").addEventListener("click", async () => {
-    try {
-      let videoInfo = await api.public.video({
-        id: "6950501241915018501",
-        download: 1,
-      });
-      console.log(videoInfo);
-    } catch (error) {
-      console.log(error);
+    TikTok = null;
+    document.getElementById("result-area").style.display = "none";
+    var url = document.getElementById("search-input").value.trim();
+    if (url.toLowerCase().indexOf("tiktok.com/") < 0) {
+      $(".input-group").effect("shake");
+      return;
     }
-    // TikTok = null;
-    // document.getElementById("result-area").style.display = "none";
-    // var url = document.getElementById("search-input").value.trim();
-    // if (url.toLowerCase().indexOf("tiktok.com/") < 0) {
-    //   $(".input-group").effect("shake");
-    //   return;
-    // }
-    // document.getElementById("search-btn").setAttribute("disabled", true);
-    // setTimeout(function () {
-    //   TikTok = new JSTikTok(url);
-    //   TikTok.get().then(function () {
-    //     showDatas();
-    //   });
-    // }, 0);
+    document.getElementById("search-btn").setAttribute("disabled", true);
+    setTimeout(function () {
+      TikTok = new JSTikTok(url);
+      TikTok.get().then(function () {
+        showDatas();
+      });
+    }, 0);
   });
 
   document
