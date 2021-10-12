@@ -27,7 +27,7 @@ class JSTikTok {
     xhr.responseType = "blob";
     xhr.onload = function (e) {
       let blob = xhr.response;
-      console.log(blob);
+      console.log(xhr.response);
       if (window.navigator && window.navigator.msSaveOrOpenBlob) {
         //IE
         window.navigator.msSaveOrOpenBlob(blob, fileName);
