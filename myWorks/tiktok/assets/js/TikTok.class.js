@@ -22,23 +22,24 @@ class JSTikTok {
       .replace("%20", "+");
   }
   force_download(url, title, format) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("post", url, true);
+    let xhr = new XMLHttpRequest();
+    xhr.open("get", url, false);
     xhr.responseType = "blob";
     xhr.onload = function (e) {
-      var blob = xhr.response;
+      let blob = xhr.response;
       if (window.navigator && window.navigator.msSaveOrOpenBlob) {
         //IE
         window.navigator.msSaveOrOpenBlob(blob, fileName);
       } else {
         // for others
-        var url = window.URL.createObjectURL(blob);
+        let url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.style.display = "none";
-        a.href = url;
+        a.href = url + ".mp4";
         a.download = `${title}.mp4`;
         document.body.appendChild(a);
         a.click();
+        a.remove();
         window.URL.revokeObjectURL(url);
       }
     };
