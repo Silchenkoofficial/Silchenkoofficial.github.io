@@ -1,3 +1,6 @@
+/* FONTS */
+@import url("../fonts/opensans.css");
+
 *,
 *::after,
 *::before {
@@ -8,7 +11,7 @@
 
 body {
   font-display: fallback;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   min-height: 100vh;
   background-color: #f5f5f5;
@@ -28,7 +31,7 @@ a {
 }
 .header .header__nav {
   justify-content: flex-end;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .header .header__nav .navbar-nav {
@@ -40,7 +43,7 @@ a {
   padding: 50px 0;
   text-align: center;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
 }
 .header__content > *:not(:last-child) {
   margin-bottom: 10px;
@@ -75,7 +78,7 @@ a {
 }
 .how-to-use__steps .step .step__title {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .how-to-use__steps .step .step__desc {
   color: #6c757d;
