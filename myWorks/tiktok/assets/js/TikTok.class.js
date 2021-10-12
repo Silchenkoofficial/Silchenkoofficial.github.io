@@ -36,11 +36,11 @@ class JSTikTok {
         const a = document.createElement("a");
         a.style.display = "none";
         a.href = url;
-        a.download;
+        a.download = `${title}.mp4`;
         document.body.appendChild(a);
         a.click();
         a.remove();
-        window.URL.revokeObjectURL(url);
+        // window.URL.revokeObjectURL(url);
       }
     };
     xhr.send();
