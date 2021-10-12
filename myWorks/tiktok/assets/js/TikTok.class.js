@@ -124,16 +124,6 @@ class JSTikTok {
 
     this.datas = { video: video, music: music, author: author };
   };
-  download_music = async () => {
-    if (this.datas == null) {
-      await this.get();
-    }
-    this.force_download(
-      this.bypassCorsHeaders + this.urlencode(this.datas.music.url) + "&d=1",
-      this.datas.music.id,
-      "mp3"
-    );
-  };
   download_video = async () => {
     if (this.datas == null) {
       await this.get();

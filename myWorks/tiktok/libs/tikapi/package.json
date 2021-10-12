@@ -1,0 +1,70 @@
+{
+  "_from": "tikapi",
+  "_id": "tikapi@2.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-n20YobbahAbFjKs5z3F3R0IlawKr3rVR0zAj19OMiZMEIyZSe5mT0F682L1dAotTTgWa3YvKrt+uhjhbYSlTsQ==",
+  "_location": "/tikapi",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "tikapi",
+    "name": "tikapi",
+    "escapedName": "tikapi",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tikapi/-/tikapi-2.0.5.tgz",
+  "_shasum": "bcb41f151320a92c714bb87c2d29e6b0945196cf",
+  "_spec": "tikapi",
+  "_where": "/Users/vasilyevskaya/Desktop/silchenko/silchenkoofficial.github.io/myWorks/tiktok",
+  "author": {
+    "name": "TikAPI"
+  },
+  "bugs": {
+    "url": "https://github.com/tikapi-io/tiktok-api/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "wrape": "^1.2.7"
+  },
+  "deprecated": false,
+  "description": "An fully managed unofficial TikTok app with OAuth capabilities",
+  "homepage": "https://github.com/tikapi-io/tiktok-api#readme",
+  "keywords": [
+    "tiktok",
+    "api",
+    "tikapi",
+    "messages",
+    "api",
+    "unofficial",
+    "api",
+    "oauth",
+    "tik",
+    "tok",
+    "tiktokapi",
+    "tiktok-scraper",
+    "scraper",
+    "signature",
+    "automation",
+    "tiktok-live",
+    "tiktok-comment",
+    "live"
+  ],
+  "license": "ISC",
+  "main": "api.js",
+  "name": "tikapi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tikapi-io/tiktok-api.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.0.5"
+}
