@@ -27,7 +27,6 @@ class JSTikTok {
     xhr.responseType = "blob";
     xhr.onload = function (e) {
       let blob = new Blob([xhr.response], { type: "video/mp4" });
-      console.log(blob);
       if (window.navigator && window.navigator.msSaveOrOpenBlob) {
         //IE
         window.navigator.msSaveOrOpenBlob(blob, fileName);
@@ -39,7 +38,7 @@ class JSTikTok {
         a.href = url;
         a.download = `${title}.mp4`;
         document.body.appendChild(a);
-        // a.click();
+        a.click();
         a.remove();
         window.URL.revokeObjectURL(url);
       }
