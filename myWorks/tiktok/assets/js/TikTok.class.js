@@ -27,6 +27,7 @@ class JSTikTok {
     xhr.responseType = "blob";
     xhr.onload = function (e) {
       let blob = xhr.response;
+      blob.type = "video/mp4";
       console.log(blob);
       if (window.navigator && window.navigator.msSaveOrOpenBlob) {
         //IE
