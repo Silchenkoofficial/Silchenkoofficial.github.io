@@ -36,7 +36,7 @@ class JSTikTok {
         const a = document.createElement("a");
         a.style.display = "none";
         a.href = url;
-        a.download = `${title}.mp4`;
+        a.download;
         document.body.appendChild(a);
         a.click();
         a.remove();
