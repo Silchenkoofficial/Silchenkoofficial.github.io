@@ -32,7 +32,7 @@ class JSTikTok {
         window.navigator.msSaveOrOpenBlob(blob, fileName);
       } else {
         // for others
-        // let url = window.URL.createObjectURL(blob);
+        let url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.style.display = "none";
         a.href = url;
@@ -40,7 +40,7 @@ class JSTikTok {
         document.body.appendChild(a);
         a.click();
         a.remove();
-        // window.URL.revokeObjectURL(url);
+        window.URL.revokeObjectURL(url);
       }
     };
     xhr.send();
