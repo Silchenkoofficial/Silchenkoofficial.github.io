@@ -38,8 +38,7 @@ class JSTikTok {
         a.href = url;
         a.download = `${title}.mp4`;
         document.body.appendChild(a);
-        // a.click();
-        console.log(a, url);
+        a.click();
         a.remove();
         // window.URL.revokeObjectURL(url);
       }
