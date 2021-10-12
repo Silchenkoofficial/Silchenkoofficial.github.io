@@ -8,10 +8,8 @@ $(document).ready(function () {
   document.getElementById("search-btn").addEventListener("click", async () => {
     try {
       let videoInfo = await api.public.video({
-        id: "6950501241915018501", //required | Validate: ^[0-9]+$
+        id: "6950501241915018501",
         download: 1,
-        //username: "lilyachty", //optional
-        //download: "<any>", //optional | Allowed: 0, 1
       });
       console.log(videoInfo);
     } catch (error) {
