@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<title>
+		Account </title>
+	<meta name="description" content="Investor&#039;s personal area" />
+	<meta name="keywords" content="Investor&#039;s personal area" />
+	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+	<link rel="shortcut icon" href="/favicon.ico?v=2">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/xessentials.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/xstyles.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/xstyles_size.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/select2.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/select2.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/countdown.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		var h = 7;
+		var m = 22;
+		var s = 36;
+		setInterval("showtime()", 1000);
+
+		function showtime() {
+			s++;
+			if (s >= 60) {
+				s = 0;
+				m++;
+				if (m >= 60) {
+					m = 0;
+					h++;
+					if (h >= 24) h = 0;
+				}
+			}
+			s = s + "";
+			m = m + "";
+			h = h + "";
+			if (s.length < 2) s = "0" + s;
+			if (m.length < 2) m = "0" + m;
+			if (h.length < 2) h = "0" + h;
+			document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+		}
+	</script>
+	<script>
+		function mobile_menu_button() {
+			if ($('#div2').hasClass('vsbl')) $('#div2').removeClass('vsbl');
+			else $('#div2').addClass('vsbl');
+		};
+	</script>
+</head>
+
+<body>
+	<header class="head-x">
+		<div class="container">
+			<script type="text/javascript">
+				baseUrl = "https://widgets.cryptocompare.com/";
+				var scripts = document.getElementsByTagName("script");
+				var embedder = scripts[scripts.length - 1];
+				var cccTheme = {
+					"General": {
+						"background": "#0000",
+						"priceText": "#fff"
+					},
+					"Currency": {
+						"color": "#fff"
+					}
+				};
+				(function () {
+					var appName = encodeURIComponent(window.location.hostname);
+					if (appName == "") {
+						appName = "local";
+					}
+					var s = document.createElement("script");
+					s.type = "text/javascript";
+					s.async = true;
+					var theUrl = baseUrl + 'serve/v3/coin/header?fsyms=BTC,ETH,LTC&tsyms=USD';
+					s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+					embedder.parentNode.appendChild(s);
+				})();
+			</script>
+			<a href="https://t.me/botx_top" target="_blank" class="soc telegram"><i class="fa fa-paper-plane"></i></a>
+			<a href="https://twitter.com/botx_top" target="_blank" class="soc twitter"><i class="fa fa-twitter"></i></a>
+			<a href="https://www.youtube.com/channel/UCKdtBSAaZtsBJKmiAmNHoeg" target="_blank" class="soc youtube"><i
+					class="fa fa-youtube"></i></a>
+			<a href="https://t.me/botx_support" target="_blank" class="soc telegram tg-sp"><i
+					class="fa fa-paper-plane"></i> Support</a>
+			<span class="time">
+				<i class="fa fa-clock-o"></i>
+				24.06.2021 / <span id="time"></span>
+			</span>
+		</div>
+	</header>
+	<header class="menu-x">
+		<div class="container">
+			<a class="logo" href="/"></a>
+			<button id="div1" onclick="mobile_menu_button();" class="btn btn-primary btn-menu"><i
+					class="fa fa-bars"></i></button>
+			<div id="div2" class="menu_mobile_box">
+				<ul class="top-nav">
+					<li>
+						<a href="/"><i class="fa fa-home"></i>Home</a>
+					</li>
+					<li>
+						<a href="/bonus"><span class="newest">NEW</span><i class="fa fa-gift"></i>Bonus</a>
+					</li>
+					<li>
+						<a href="/faq"><i class="fa fa-life-saver"></i>FAQ</a>
+					</li>
+					<li>
+						<a href="/contacts"><i class="fa fa-envelope"></i>Contact Me</a>
+					</li>
+					<li>
+						<a class="btn btn-border globe" data-toggle="modal" data-target=".lang-modal"><i
+								class="fa fa-globe"></i></a>
+					</li>
+					<li>
+						<a href="/account" class="info-acc">
+							<img src="settings/avatars/sex1.svg" alt="" class="ava-menu">
+							<i class="fa fa-bank"></i>0.00 USD<i class="fa fa-plus depm"></i>
+						</a>
+					</li>
+					<div class="visible-sm visible-xs">
+						<li id="myaccount"><a href="/account"><i class="fa fa-user-circle"></i>Account</a></li>
+						<li id="financialhistory"><a href="/history"><i class="fa fa-calendar"></i>Statistics</a></li>
+						<li id="withdraw"><a href="/cashout"><i class="fa fa-credit-card"></i>Withdraw</a></li>
+						<li id="affiliate"><a href="/partners"><i class="fa fa-link"></i>Affiliates</a></li>
+						<li id="promotionalmaterials"><a href="/banners"><i class="fa fa-image"></i>Banners</a></li>
+						<li id="ticket"><a href="/tickets"><i class="fa fa-life-ring"></i>Tickets</a></li>
+						<li id="editaccount"><a href="/settings"><i class="fa fa-cog"></i>Settings</a></li>
+						<li><a href="/exit.php"><i class="fa fa-sign-out"></i>Logout</a></li>
+					</div>
+				</ul>
+				<button id="div1" onclick="mobile_menu_button();" class="close_menu_btn">
+			</div>
+		</div>
+	</header>
+	<div id="wrapper">
+		<script src="assets/js/clipboard.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jquery-2.1.4.min.js"></script>
+		<style>
+			#myaccount a {
+				color: #e8eff3
+			}
+
+			#myaccount a i {
+				color: #03bdaf;
+			}
+
+			.error {
+				border-color: red;
+			}
+		</style>
+		<script>
+			var rates = []; // курсы платежек
+			var codes = []; // коды платежек
+			var accuracy = []; // точности
+			var min_v = []; // минимальные значения тарифов
+			var max_v = []; // максимальные значения тарифов
+
+			var ps = 8; // платежка по умолчанию: bitcoin
+			var plan_id = 41; // тариф по умолчанию: Daily
+			var type_trans = 'deposit'; // вид депа по умолчанию: deposit
+			rates[1] = 1.0000;
+			codes[1] = 'USD';
+			accuracy[1] = '2';
+			rates[2] = 1.0000;
+			codes[2] = 'USD';
+			accuracy[2] = '2';
+			rates[8] = 35000.0000;
+			codes[8] = 'BTC';
+			accuracy[8] = '7';
+			rates[41] = 160.0000;
+			codes[41] = 'LTC';
+			accuracy[41] = '5';
+			rates[42] = 0.8000;
+			codes[42] = 'XRP';
+			accuracy[42] = '4';
+			rates[43] = 163.0000;
+			codes[43] = 'DASH';
+			accuracy[43] = '4';
+			rates[44] = 240.0000;
+			codes[44] = 'XMR';
+			accuracy[44] = '4';
+			rates[45] = 2400.0000;
+			codes[45] = 'ETH';
+			accuracy[45] = '5';
+			rates[46] = 570.0000;
+			codes[46] = 'BCH';
+			accuracy[46] = '5';
+			min_v[41] = 10.00;
+			max_v[41] = 200000.00;
+			min_v[42] = 10.00;
+			max_v[42] = 200000.00;
+
+			function ucfirst(str) {
+				var f = str.charAt(0).toUpperCase();
+				return f + str.substr(1, str.length - 1);
+			}
+
+			function number_format(number, decimals, dec_point, thousands_sep) { // Format a number with grouped thousands
+
+				var i, j, kw, kd, km;
+
+				// input sanitation & defaults
+				if (isNaN(decimals = Math.abs(decimals))) {
+					decimals = 2;
+				}
+				if (dec_point == undefined) {
+					dec_point = ",";
+				}
+				if (thousands_sep == undefined) {
+					thousands_sep = ".";
+				}
+
+				i = parseInt(number = (+number || 0).toFixed(decimals)) + "";
+
+				if ((j = i.length) > 3) {
+					j = j % 3;
+				} else {
+					j = 0;
+				}
+
+				km = (j ? i.substr(0, j) + thousands_sep : "");
+				kw = i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands_sep);
+				//kd = (decimals ? dec_point + Math.abs(number - i).toFixed(decimals).slice(2) : "");
+				kd = (decimals ? dec_point + Math.abs(number - i).toFixed(decimals).replace(/-/, 0).slice(2) : "");
+
+				return km + kw + kd;
+			}
+
+
+			var planPrices = {
+				41: {
+					btc: [0.0003, 3],
+					eth: [0.005, 500],
+					ltc: [0.06, 600],
+					dash: [0.06, 600],
+					bch: [0.02, 200],
+					xrp: [15, 150000],
+					xmr: [0.05, 500],
+					usd: [10, 100000]
+				},
+				42: {
+					btc: [0.0003, 3],
+					eth: [0.005, 500],
+					ltc: [0.06, 600],
+					dash: [0.06, 600],
+					bch: [0.02, 200],
+					xrp: [15, 150000],
+					xmr: [0.05, 500],
+					usd: [10, 100000]
+				}
+			};
+
+			var cur_paysys_name = 'btc';
+			var cur_min = 0,
+				cur_max = 0,
+				cur_val = 0;
+
+			function check_sum() {
+				var sum = document.getElementById('sum');
+				sum.value = sum.value.replace(',', '.');
+				if (isNaN(sum.value)) sum.value = cur_min;
+				var disabled = sum.value < cur_min || sum.value > cur_max;
+				//document.querySelector('.make-dep .btn-success').disabled = disabled;
+				cur_val = sum.value;
+				console.log(disabled, sum.value, `${sum.value} < ${cur_min} = ${sum.value < cur_min}`,
+					`${sum.value} > ${cur_max} = ${sum.value > cur_max}`);
+				$('#bitcoin_window').hide();
+				if (disabled) {
+					document.getElementById('sum').classList.add('error');
+				} else {
+					document.getElementById('sum').classList.remove('error');
+				}
+			}
+
+			function change_paysys() {
+				for (var id in planPrices) {
+					var range = (!planPrices[id][cur_paysys_name]) ? planPrices[id]['usd'] : planPrices[id][cur_paysys_name];
+					var min = range[0] == parseInt(range[0]) ? number_format(range[0], 0, '.', ',') : range[0];
+					var max = range[1] == parseInt(range[1]) ? number_format(range[1], 0, '.', ',') : range[1];
+					var currency = 'USD';
+					if (planPrices[id][cur_paysys_name]) currency = cur_paysys_name.length < 4 ? cur_paysys_name.toUpperCase() :
+						ucfirst(cur_paysys_name);
+					var pp = document.getElementById('plan-price-' + id);
+					pp.getElementsByClassName('range')[0].innerText = min + ' ' + currency + ' - ' + max + ' ' + currency;
+					if (pp.classList.contains('active')) {
+						[cur_min, cur_max] = range;
+						check_sum();
+						console.log('min', cur_min, 'max', cur_max);
+					}
+				}
+			}
+
+			function sel_pay(paysys_id, paysys_name) {
+				ps = paysys_id;
+
+				if (paysys_name) {
+					cur_paysys_name = paysys_name;
+					console.log(cur_paysys_name);
+					change_paysys();
+				} else {
+					document.querySelector('#deposit label.btn.active').click();
+					document.querySelector('.make-dep label.active').click();
+				}
+				document.getElementsByClassName('make-dep')[0].className = 'make-dep ' + cur_paysys_name;
+				var t = $('#ps' + plan_id).val(); // выбранная платежка
+				min_v.forEach(function (item, i, min_v) {
+					if (plan_id == i) { // Только для определенного тарифа!
+						min_text = min_v[i] / rates[t];
+						max_text = max_v[i] / rates[t];
+						min_text = min_text < 1 ? min_text.toFixed(4) : min_text.toFixed(2);
+						max_text = max_text < 1 ? max_text.toFixed(4) : max_text.toFixed(2);
+						$('#amount_code' + i).text(codes[t]);
+						$('#minsum' + i).text(codes[t] + ' ' + min_text);
+						$('#maxsum' + i).text(codes[t] + ' ' + max_text);
+					};
+				});
+
+			};
+
+
+			function ready() {
+				sel_pay();
+			}
+
+			document.addEventListener("DOMContentLoaded", ready);
+
+			$(document).ready(function () {
+				var $act = $('#deposit label.btn.active');
+				$('#deposit label.btn').click();
+				setTimeout(function () {
+					$act.click()
+				});
+			});
+		</script>
+
+		<section>
+			<div class="container">
+				<div class="row row25">
+					<aside class="col-md-3">
+						<div class="visible-md visible-lg">
+							<div class="user">
+								<img src="settings/avatars/sex1.svg" alt="">
+								<div>
+									<div class="user__name">jackx2019 </div>
+								</div>
+							</div>
+							<div class="white-row menu-row">
+								<ul class="nav nav-list">
+									<li id="myaccount"><a href="/account"><i class="fa fa-user-circle"></i>Account</a>
+									</li>
+									<li id="financialhistory"><a href="/history"><i
+												class="fa fa-calendar"></i>Statistics</a></li>
+									<li id="withdraw"><a href="/cashout"><i class="fa fa-credit-card"></i>Withdraw</a>
+									</li>
+									<li id="affiliate"><a href="/partners"><i class="fa fa-link"></i>Affiliates</a></li>
+									<li id="promotionalmaterials"><a href="/banners"><i
+												class="fa fa-image"></i>Banners</a></li>
+									<li id="ticket"><a href="/tickets"><i class="fa fa-life-ring"></i>Tickets</a></li>
+									<li id="editaccount"><a href="/settings"><i class="fa fa-cog"></i>Settings</a></li>
+									<li><a href="/exit.php"><i class="fa fa-sign-out"></i>Logout</a></li>
+								</ul>
+							</div>
+							<button id="div1" onclick="mobile_menu_button();" class="close_menu_btn">
+							</button>
+						</div>
+					</aside>
+					<div class="col-md-9">
+						<h2>Account overview</h2>
+						<div class="row">
+							<div class="col-sm-8">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="white-row stat-row stat1">
+											<label>Total invested</label>
+											<h3>0.00 USD</h3>
+											<label>Last investment</label>
+											<p><a href="/history">0 </a></p>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="white-row stat-row stat2">
+											<label>Total income</label>
+											<h3>0.00 USD</h3>
+											<label>Last income</label>
+											<p><a href="/history">0 </a></p>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="white-row stat-row stat4">
+											<label>Total withdrawal</label>
+											<h3>0.00 USD</h3>
+											<label>Last withdrawal</label>
+											<p><a href="/history">0 </a></p>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="white-row stat-row stat3">
+											<label>Total affiliate bonus</label>
+											<h3>0.00 USD</h3>
+											<label>Last affiliate bonus</label>
+											<p><a href="/history">0 </a></p>
+										</div>
+									</div>
+									<div class="col-xs-12">
+										<div class="white-row">
+
+											<p class="m-b-5">Share your referral link and get 5% of the deposits of your
+												referrals!</p>
+											<div class="input-group">
+												<input id="ref" type="text" value="https://botx.top/?ref=jackx"
+													class="form-control">
+												<span class="input-group-btn">
+													<button id="btn-clipboard" data-clipboard-target="#ref"
+														type="submit" name="submit" class="btn btn-primary">
+														<i class="fa fa-clone"></i>
+													</button>
+												</span>
+												<script>
+													new Clipboard('#btn-clipboard');
+												</script>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="white-row stat5">
+									<table class="table project-table pay">
+										<thead>
+											<tr>
+												<td>Payment system</td>
+												<td>Balance</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><img src="assets/images/Bitcoin.svg" class="Bitcoin">Bitcoin</td>
+												<td>0 BTC</td>
+											</tr>
+											<tr>
+												<td><img src="assets/images/Ethereum.svg" class="Ethereum">Ethereum</td>
+												<td>0 ETH</td>
+											</tr>
+											<tr>
+												<td><img src="assets/images/Litecoin.svg" class="Litecoin">Litecoin</td>
+												<td>0 LTC</td>
+											</tr>
+											<tr>
+												<td><img src="assets/images/Dash.svg" class="Dash">Dash</td>
+												<td>0 DASH</td>
+											</tr>
+											<tr>
+												<td><img src="assets/images/Bitcoin Cash.svg"
+														class="Bitcoin Cash">Bitcoin Cash</td>
+												<td>0 BCH</td>
+											</tr>
+											<tr>
+												<td><img src="assets/images/Ripple.svg" class="Ripple">Ripple</td>
+												<td>0 XRP</td>
+											</tr>
+											<tr>
+												<td><img src="assets/images/Monero.svg" class="Monero">Monero</td>
+												<td>0 XMR</td>
+											</tr>
+											<tr>
+												<td><img src="assets/images/Perfect Money.svg"
+														class="Perfect Money">Perfect Money</td>
+												<td>0 USD</td>
+											</tr>
+										</tbody>
+									</table>
+									<label>Total balance</label>
+									<h3>0 USD</h3>
+									<a href="../cashout" class="btn btn-primary btn-block">Withdraw</a>
+								</div>
+							</div>
+						</div>
+						<h2>Make deposit</h2>
+						<div class="make-dep">
+							<p>I. Select deposit</p>
+							<div class="btn-group btn-group-justified deposits-btn" data-toggle="buttons">
+								<label class="btn active" id="plan-price-41">
+									<input type="radio" name="radio_plan" class="js-plan" data-value="41"
+										onchange="calc_init(41)">
+									<!--input type="radio" name="radio_plan" checked="" onchange="{plan_id=46; calc_init();}"-->
+									<div class="xlogo-deposit">
+										<h4>0.5%</h4>
+										<p class="notedep">HOURLY FOR <span class="text-color">400 HOURS</span></p>
+									</div>
+									<div class="row">
+										<div class="col-xs-6">
+											<label>Percent</label>
+											<h5>0.5%</h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Total return</label>
+											<h5>200%</h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Period</label>
+											<h5>400 hours</h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Principal</label>
+											<h5>Include</h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Min - Max deposit</label>
+											<h5 class="nomargin"><span class="range"></span></h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Withdraw</label>
+											<h5>12 Hours</h5>
+										</div>
+									</div>
+								</label>
+								<label class="btn" id="plan-price-42">
+									<input type="radio" name="radio_plan" class="js-plan" data-value="42"
+										onchange="calc_init(42)">
+									<!--input type="radio" name="radio_plan" checked="" onchange="{plan_id=46; calc_init();}"-->
+									<div class="xlogo-deposit">
+										<h4>14%</h4>
+										<p class="notedep">DAILY FOR <span class="text-color">15 DAYS</span></p>
+									</div>
+									<div class="row">
+										<div class="col-xs-6">
+											<label>Percent</label>
+											<h5>14%</h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Total return</label>
+											<h5>210%</h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Period</label>
+											<h5>15 days</h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Principal</label>
+											<h5>Include</h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Min - Max deposit</label>
+											<h5 class="nomargin"><span class="range"></span></h5>
+										</div>
+										<div class="col-xs-6">
+											<label>Withdraw</label>
+											<h5>12 Hours</h5>
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="tab-content" style="display:none">
+								<div id="deposit" class="tab-pane active">
+									<p><span class="text-color">II.</span> Select your payment method</p>
+									<div class="btn-group btn-group-justified payments" data-toggle="buttons">
+										<label class="btn active">
+											<input type="radio" name="payment_method" checked=""
+												onchange="{sel_pay(8, 'btc'); calc_init();}"><img
+												src="assets/images/Bitcoin.svg" class="Bitcoin">Bitcoin
+										</label>
+										<label class="btn">
+											<input type="radio" name="payment_method"
+												onchange="{sel_pay(45, 'eth'); calc_init();}"><img
+												src="assets/images/Ethereum.svg" class="Ethereum">Ethereum
+										</label>
+										<label class="btn">
+											<input type="radio" name="payment_method"
+												onchange="{sel_pay(41, 'ltc'); calc_init();}"><img
+												src="assets/images/Litecoin.svg" class="Litecoin">Litecoin
+										</label>
+										<label class="btn">
+											<input type="radio" name="payment_method"
+												onchange="{sel_pay(43, 'dash'); calc_init();}"><img
+												src="assets/images/Dash.svg" class="Dash">Dash
+										</label>
+										<label class="btn">
+											<input type="radio" name="payment_method"
+												onchange="{sel_pay(41, 'bch'); calc_init();}"><img
+												src="assets/images/Bitcoin Cash.svg" class="Bitcoin Cash">Bitcoin Cash
+										</label>
+										<label class="btn">
+											<input type="radio" name="payment_method"
+												onchange="{sel_pay(42, 'xrp'); calc_init();}"><img
+												src="assets/images/Ripple.svg" class="Ripple">Ripple
+										</label>
+										<label class="btn">
+											<input type="radio" name="payment_method"
+												onchange="{sel_pay(44, 'xmr'); calc_init();}"><img
+												src="assets/images/Monero.svg" class="Monero">Monero
+										</label>
+										<label class="btn">
+											<input type="radio" name="payment_method"
+												onchange="{sel_pay(1, 'perfect'); calc_init();}"><img
+												src="assets/images/Perfect Money.svg" class="Perfect Money">Perfect
+											Money
+										</label>
+									</div>
+								</div>
+							</div>
+							<p><span class="text-color">III.</span> Insert amount</p>
+							<div class="bitcoin-block" id="bitcoin_window" style="display:none;"></div>
+							<div class="row" id="Result_enter" style="display:none;"></div>
+							<div class="alert alert-info">
+								<i class="fa fa-info-circle"></i> <small>When investing in cryptocurrencies, wait up to
+									15 seconds after clicking the "Make deposit" button. If you have any questions, <a
+										href="/tickets" target="_blank">create a ticket</a></small>
+							</div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="text" class="form-control" id="sum" value=""
+											oninput="calc_init();">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<button id="load-one" class="btn btn-primary fullwidth m-b-20"
+										onclick="do_pay();">MAKE DEPOSIT</button>
+								</div>
+							</div>
+
+							<div id="purse_window" style="display:none;">
+								<div class="alert alert-info">Enter your wallet number to receive interest payments.
+								</div>
+								<div class="form-group">
+									<form id="form_purse" onsubmit="return false;">
+										<input id="text_purse" type="text" placeholder="wallet number" value=""
+											class="form-control">
+									</form>
+								</div>
+							</div>
+							<p><i class="fa fa-calculator text-color"></i> Potential profit calculation</p>
+							<div class="row m-b-40">
+								<div class="col-sm-2">
+									<label>Daily profit </label>
+									<h3><span id="calc_sum1">0.00</span> <span id="calc_code1"></span></h3>
+								</div>
+								<div class="col-sm-2">
+									<label>Total profit</label>
+									<h3><span id="calc_sum2">1600.00</span> <span id="calc_code2"></span></h3>
+								</div>
+								<div class="col-sm-4">
+									<label>Return of investment (R.O.I)*</label>
+									<h3><span id="calc_sum3">600.00</span> <span id="calc_code3"></span></h3>
+								</div>
+								<div class="col-sm-4">
+									<small class="darkcolor">*The sum based on your total R.O.I (return of investment)
+										with initial included.</small>
+								</div>
+							</div>
+
+						</div>
+						<h2>Your deposits</h2>
+
+						<div class="white-row">
+							<p>Not found</p>
+						</div>
+
+
+
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<h2>Accepted here:</h2>
+					</div>
+					<div class="col-sm-8">
+						<div class="footer_payments">
+							<a href="https://bitcoin.org" target="_blank"><img src="assets/images/Bitcoin.svg"
+									class="Bitcoin"></a>
+							<a href="https://www.ethereum.org" target="_blank"><img src="assets/images/Ethereum.svg"
+									class="Ethereum"></a>
+							<a href="https://litecoin.org" target="_blank"><img src="assets/images/Litecoin.svg"
+									class="Litecoin"></a>
+							<a href="https://www.dash.org" target="_blank"><img src="assets/images/Dash.svg"
+									class="Dash"></a>
+							<a href="https://www.bitcoincash.org" target="_blank"><img
+									src="assets/images/Bitcoin Cash.svg" class="Bitcoin Cash"></a>
+							<a href="https://ripple.com" target="_blank"><img src="assets/images/Ripple.svg"
+									class="Ripple"></a>
+							<a href="https://getmonero.org" target="_blank"><img src="assets/images/Monero.svg"
+									class="Monero"></a>
+							<a href="https://perfectmoney.is" target="_blank"><img src="assets/images/Perfect Money.svg"
+									class="Perfect Money"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<span>&copy;BOTX 2021, All rights reserved.</span>
+					</div>
+					<div class="col-md-6">
+						<ul class="footer-menu">
+							<li><a href="/faq">FAQ</a></li>
+							<li><a href="/contacts">Contacts</a></li>
+							<li><a href="/customeragreement">Terms of use</a></li>
+							<li><a href="/privacypolicy">Privacy policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<a class="toTop" href="#topNav"><i class="fa fa-angle-up"></i></a>
+		</div>
+	</footer>
+	<div class="modal fade lang-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lng">
+			<div class="modal-content">
+				<div class="modal-body">
+					<ul>
+						<li><a href "#" class="active"><img src="assets/images/flags/united-kingdom.svg">English</a>
+						</li>
+						<li><a href "#"><img src="assets/images/flags/vietnam.svg">Tiếng Việt</a></li>
+						<li><a href "#"><img src="assets/images/flags/germany.svg">Deutsch</a></li>
+						<li><a href "#"><img src="assets/images/flags/spain.svg">Español</a></li>
+						<li><a href "#"><img src="assets/images/flags/japan.svg">日本語</a></li>
+						<li><a href "#"><img src="assets/images/flags/france.svg">Français</a></li>
+						<li><a href "#"><img src="assets/images/flags/italy.svg">Italiano</a></li>
+						<li><a href "#"><img src="assets/images/flags/russia.svg">Русский</a></li>
+						<li><a href "#"><img src="assets/images/flags/india.svg">हिन्दी</a></li>
+						<li><a href "#"><img src="assets/images/flags/china.svg">汉语</a></li>
+					</ul>
+					<a href="/contacts" class="m-t-15">Suggest a correction (Translation Services)</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<script src="/assets/plugins/select2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('select').select2();
+		});
+	</script>
+	<script type="text/javascript" src="assets/plugins/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquery.appear.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+	<script src="https://kit.fontawesome.com/54dcfa2d16.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquery-countdown/jquery.countdown.min.js"></script>
+	<script defer>
+		// процедура оплаты
+		function do_pay() {
+			sum = $('#sum').val();
+			if (type_trans == 'deposit') {
+
+				if (!cur_val) return;
+
+				if (cur_val < cur_min || cur_val > cur_max) {
+					$('#bitcoin_window')
+						.html('<div class="alert alert-danger">Enter the correct amount (' + cur_min + ' - ' + cur_max +
+							')!</div>')
+						.show();
+					return;
+				}
+				if (cur_val > cur_min || cur_val < cur_max) {
+					$('#load-one').html('<span class="spinner-border" role="status" aria-hidden="true"></span>Loading...');
+				}
+
+				var data = {
+					sum: sum,
+					ps: ps,
+					plan_id: plan_id
+				};
+				$.ajax({
+					type: "POST",
+					url: "form.php?action=enter",
+					data: data,
+					typeData: 'html',
+					success: function (html) {
+						if (ps == 8 || ps == 41 || ps == 42 || ps == 43 || ps == 44 || ps == 45 || ps ==
+							46) { // Bitcoin OR Litecoin OR Ripple OR Dash OR Monero OR ETH OR BitcoinCash (BCH)
+							$("#bitcoin_window").html(html).show();
+						} else {
+							$("#Result_enter").html(html);
+							$("#form_pay").submit();
+						};
+					}
+				});
+			} else {
+				$.ajax({
+					type: "GET",
+					url: "form.php?action=reinvest&ps=" + ps + "&plan_id=" + plan_id + "&sum=" + sum,
+					typeData: 'html',
+					success: function (html) {
+						$("#Result_enter").html(html).show();
+					}
+				});
+			};
+			return false;
+		}; //do_pay
+
+		$('#sum').on('input', e => {
+			calc_init($('.btn.active>.js-plan').attr('data-value'))
+		})
+
+		$('#plan-price-41').click((e) => {
+			calc_init(41)
+		})
+		$('#plan-price-42').click((e) => {
+			calc_init(42)
+		})
+
+
+		function calc_init(plan_id) {
+			var sum = parseFloat($('#sum').val().replace(',', '.'));
+			if (plan_id == 41) {
+				$('#calc_sum1').html(parseFloat((sum * 0.12).toFixed(accuracy[ps])));
+				$('#calc_sum2').html(parseFloat((sum * 2.0).toFixed(accuracy[ps])));
+				$('#calc_sum3').html(parseFloat((sum * 1.0).toFixed(accuracy[ps])));
+			} else if (plan_id == 42) {
+				$('#calc_sum1').html(parseFloat((sum * 0.14).toFixed(accuracy[ps])));
+				$('#calc_sum2').html(parseFloat((sum * 2.1).toFixed(accuracy[ps])));
+				$('#calc_sum3').html(parseFloat((sum * 1.1).toFixed(accuracy[ps])));
+			};
+			$('#calc_code1, #calc_code2, #calc_code3').html(codes[ps]);
+
+			change_paysys();
+		}; //refresh_profit
+	</script>
+	<script type="text/javascript" src="assets/js/countdown.min.js"></script>
+	<script src="assets/plugins/select2/select2.full.min.js"></script>
+	<script type="text/javascript" src="assets/js/scripts.min.js"></script>
+	<script type="text/javascript" src="assets/js/js.cookie.js"></script>
+
+</body>
+
+</html>
