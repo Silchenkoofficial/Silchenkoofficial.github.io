@@ -136,6 +136,9 @@ body {
       bottom: 0;
       background-color: $--bg-color;
       width: 60%;
+      @media (min-width: 1800px) {
+        width: 55%;
+      }
       display: flex;
       align-items: center;
       justify-content: center;

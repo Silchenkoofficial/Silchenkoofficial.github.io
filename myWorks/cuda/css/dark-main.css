@@ -1,0 +1,82 @@
+body.dark-theme .form-control,
+body.dark-theme .form-check-input {
+  border-color: #616161;
+}
+
+body.dark-theme {
+  color: #ffffff !important;
+  background-color: #222222;
+}
+
+body.dark-theme .btn.btn-outline-secondary {
+  color: #fff;
+}
+
+body.dark-theme .btn.btn-outline-secondary:hover {
+  color: #5e5873;
+}
+
+body.dark-theme .section .block__header {
+  border-bottom: 1px solid rgba(235, 233, 241, 0.15);
+}
+
+body.dark-theme .enter-bg {
+  background-color: #262626 !important;
+}
+
+body.dark-theme .header {
+  background-color: #2a2a2a;
+}
+
+body.dark-theme .add-patient .form-select,
+body.dark-theme .add-patient .form-control {
+  background-color: #383838 !important;
+  color: #fff;
+  border: none;
+}
+
+body.dark-theme .add-patient .form-select {
+  background: url("../images/arrow-down.png") no-repeat right 0.75rem center/10px;
+}
+
+body.dark-theme .add-patient .date .input-group > *:not(:last-child) {
+  border-right: 1px solid rgba(220, 219, 226, 0.1) !important;
+}
+
+body.dark-theme .pagination {
+  background-color: #373737;
+}
+
+body.dark-theme .pagination .page-item .page-link {
+  color: #fff;
+  background-color: transparent;
+}
+
+body.dark-theme .pagination .page-item.active .page-link {
+  background-color: #008b8b !important;
+}
+
+body.dark-theme .pagination .page-item:hover .page-link {
+  color: #008b8b;
+}
+
+body.dark-theme .pagination .page-item .page-link {
+  border: none !important;
+}
+
+body.dark-theme .add-patient .block__header {
+  background-color: #272727;
+}
+
+body.dark-theme .add-patient .block__body {
+  background-color: #2d2d2d;
+}
+
+body.dark-theme .history__content:not(:last-child) {
+  border-bottom: 1px solid rgba(235, 233, 241, 0.15);
+}
+
+body.dark-theme .form-control[disabled] {
+  background-color: #424242 !important;
+  color: #9c9ba1 !important;
+}
