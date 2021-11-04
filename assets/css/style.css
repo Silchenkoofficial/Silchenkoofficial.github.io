@@ -51,10 +51,11 @@ img {
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  margin: 40px -10px -10px -10px;
 }
 
 .project {
+  margin: 10px;
   width: 300px;
   padding: 16px;
   border-radius: 10px;
@@ -62,6 +63,10 @@ img {
   color: #3d405b;
   transition: transform 0.2s;
   overflow: hidden;
+}
+
+.project p {
+  font-weight: bold;
 }
 
 .project img {
@@ -75,13 +80,14 @@ img {
 }
 
 .chips {
+  margin: 10px -5px -5px;
   margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
 }
 
 .chips .chip {
+  margin: 5px;
   padding: 5px 10px;
   background-color: #c2c2c2;
   font-size: 12px;
