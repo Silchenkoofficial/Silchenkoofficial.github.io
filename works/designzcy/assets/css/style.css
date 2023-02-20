@@ -215,7 +215,7 @@ li {
   }
 }
 .top__container {
-  background: #fff url("/assets/img/bg.png") no-repeat center right/contain;
+  background: #fff url("../img/bg.png") no-repeat center right/contain;
   display: flex;
   align-items: center;
   justify-content: space-between;

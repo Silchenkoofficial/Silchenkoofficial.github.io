@@ -225,7 +225,7 @@ li {
     }
   }
   &__container {
-    background: $color-white url("/assets/img/bg.png") no-repeat center right /
+    background: $color-white url("../img/bg.png") no-repeat center right /
       contain;
     @media (max-width: 899px) {
       background: none;
