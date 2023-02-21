@@ -1,4 +1,4 @@
-$maxWidth: 1170;
+$maxWidth: 1920;
 
 @mixin afont($pcSize, $mobSize) {
   $addSize: $pcSize - $mobSize;
