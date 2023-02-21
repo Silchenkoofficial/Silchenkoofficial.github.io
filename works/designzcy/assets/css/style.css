@@ -78,7 +78,7 @@ li {
 
 .divider {
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: rgba(61, 61, 63, 0.2);
 }
 
@@ -317,12 +317,12 @@ li {
 }
 @media (min-width: 912px) {
   .provide .cards__wrapper > *:not(:last-child) {
-    border-right: 2px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
   }
 }
 @media (max-width: 912px) {
   .provide .cards__wrapper > *:not(:last-child) {
-    border-bottom: 2px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
   }
 }
 .provide .cards .card {
